@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ButtonComponent } from '../../../shared/button/button.component';
 import { ControlComponent } from "../../../shared/control/control.component";
 import { FormsModule } from '@angular/forms';
+import { tick } from '@angular/core/testing';
 
 @Component({
   selector: 'app-new-ticket',
@@ -12,9 +13,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class NewTicketComponent {
 
-  onSubmit(titleElement: HTMLInputElement){
-    const enteredTitle = titleElement.value;
-    console.log('ENTERED TITLE: ' + enteredTitle);
+  onSubmit(title: string, ticketText: string){
+    console.log(title);
+    console.log(ticketText);
   }
 
 }
