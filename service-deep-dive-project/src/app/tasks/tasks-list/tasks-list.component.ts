@@ -13,7 +13,7 @@ import { TasksService } from '../tasks.service';
 export class TasksListComponent {
   selectedFilter = signal<string>('all');
   private tasksService = inject(TasksService);
-  tasks = this.tasksService.tasks;
+  tasks = this.tasksService.allTasks;
 
 
   onChangeTasksFilter(filter: string) {
